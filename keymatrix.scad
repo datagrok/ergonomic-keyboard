@@ -15,7 +15,7 @@ module keyanddsacap() {
             cube([18.4,18.4,.01], true);
             translate([0,0,5.7]) cube([18.4-5.7,18.4-5.7,.01], true);
         }
-        translate([0,0,3.5]) cmxsw();
+        translate([0,0,-12]) cube([15,15,20],true);
     }
 }
 module keyblockout() {
@@ -26,47 +26,29 @@ module rotateat(a,v){
     translate(v) { rotate(a) translate(-v) children(); }
 }
 
-sep = 19.5;
-finger_lengths = [15,0,12,32];
-key_angles = [30, 15, 0, -45];
-module finger() {
-    translate([sep*-1,0,0]) rotateat(a=[0,30,0], v=[sep/2,0,-4]) {
-        children(0);
-        translate([sep*-1,0,6]) rotateat(a=[0,0,0], v=[sep/2,0,-4])
-            children(1);
-    }        
-    translate([sep*0,0,0]) children(2);
-    translate([sep*1,0,0]) rotateat(a=[0,-60,0], v=[-sep/2,0,-4]) children(3);
+function lin(s, e, pct) = s + pct * (e - s);
+
+sep = 19;
+finger_lengths = [110-15,110-0,110-12,110-32];
+//key_angles = [30, 15, 0, -45];
+module hand() {
+    for(row = [0:3], findex=[0:3]) {
+        extend = lin(.5, 1.0, pow(row/3,.8)); // 0 to 1
+        rotate([0, lin(20, 60, pow(row/3,1.2)), 0])
+        translate([-finger_lengths[findex]*extend, findex*sep, 0])
+            rotate([0, lin(-60,30,extend), 0]) children(0);
+    }
 }
 
-*color("red") {
-translate([-37,0,6]) rotate([0,30,0]) cube([19,19,6], true);
-translate([-21,0,-3]) rotate([0,30,0]) cube([19,19,6], true);
-}
 
 difference(){
-union() {
-finger() {
-        translate([0,0,-15.375]) cube([19,19,6], true);
-        translate([0,0,-15.375]) cube([19,19,6], true);
-        translate([0,0,-15.375]) cube([19,19,6], true);
-        translate([0,0,-15.375]) cube([19,19,6], true);
-}
-translate([-30.6,0,-1]) cube([6,19,11], true);
-translate([-12.5,0,-14.7]) rotate([0,15,0]) cube([12,19,8], true);
-translate([15,0,-13.7]) rotate([0,-45,0]) cube([16,19,6], true);
-translate([15,0,-13]) rotate([0,45,0]) cube([10,19,50], true);
-}
-finger() {
-    keyblockout();
-    keyblockout();
-    keyblockout();
-    keyblockout();
+    union(){
+        *translate([-60,30,45]) rotate([0,0,-30]) cube([80,100,120], true);
+        translate([-75, 38-19/2, -40]) sphere(38, true);
+        hand() translate([0,0,-15.375]) cube([19,19,6], true);
     }
-translate([0,0,-43]) cube([50,19,50], true);
+    
+    color("red") translate([-10, sep*4/2-19/2, 70]) cube([80,sep*4,120], true);
+    hand() keyblockout();
+    hand() color("red") translate([25,0,0]) cube([50,20,10], true);
 }
-
-
-*for (c=[0:3])
-    translate([finger_lengths[c],c*sep,0])
-        finger();
