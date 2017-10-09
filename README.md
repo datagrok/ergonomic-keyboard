@@ -2,6 +2,50 @@
 
 I want an ergonomic keyboard, but with a mix of features I haven't so far found commercially, in kits, or other enthusiasts' designs.
 
+# Build log
+
+TODO: include photos
+
+### v5
+
+v4's switch placement algorithm assumes a constant angle at which the finger should strike the key. Observe that a range of angles from perpendicular to about 60 degrees is comfortable. Use this flexibility to bring the switch angles (and keycap centers) closer together.
+
+v4 prints the entire "key bowl" as one solid object. Instead, explore ways to print separated parts, requiring less support material, to be connected using standard hardware (e.g. M3 machine screws and nuts, and/or zip ties.)
+
+Result: (TODO)
+
+### v4
+
+Improved the "bowl" of v3 to avoid so much wasted support material.
+
+Result: As I feared, the vertical finger travel feels quite weird. But, I can operate all the keys without finger stretching, lateral finger movement, hand travel, or wrist movement. Could I get used to it? Maybe I'll try again to reorient the keys.
+
+### v3
+
+Hypothesis: determining maximum and minimum finger stretch can inform the derivation of a function that positions each switch and angles it toward the pad of the finger at that position. A distribution of switches across that range of motion should result in a board that can be typed on without moving the palms.
+
+Result: the "plate and post" support proved difficult to print and generated a lot of wasteful support material. I did not get a complete print. I should try to build more 45-degree angles into the design, to obviate the need for support material.
+
+Notes:
+
+- Happy with improvements to the "key bowl/boat," but the way I implemented it in OpenSCAD made it difficult to add supports. The "plate and post" was admittedly hastily added with a lot of tedious nudging-around.
+
+- I used my [Logitech M570](https://www.logitech.com/en-us/product/wireless-trackball-m570) trackball as a reference for this build. Notable difference between my trackball and my keyboard: I use the trackball with a palm-rest; the hand does not travel, the wrist does not move. Compare to most keyboards which require wrist-rests, that you're not supposed to use while typing. Can I make a keyboard that is comfortable with zero hand travel?
+
+- I wonder if I could mash-up my wireless trackball and the keyboard, replacing one of the thumb clusters. A combination pointing-device and curved-keyboard reminds me of the [King's Assembly](https://www.kickstarter.com/projects/70308014/kings-assembly-a-computer-mouse-full-of-awesome), which I didn't like because who wants to slide their bulky keyboard around their desk? And it seems like every keystroke would jostle the pointer. But a trackball instead could work well!
+
+### v2
+
+Hypothesis: with some keys angled sharply together, the pinky can still reach a 4th row without it being angled so much that it is struck with the fingernail.
+
+Result: it is difficult to reach over the first row to reach the 4th row, depending on the angle. It will be easier to evaluate success if I print a whole hand worth of keys and angle it consistently.
+
+### v1
+
+Hypothesis: Angling the switches will let me cram DSA caps together as closely as possible, making it easy to reach many of them with minimal finger travel.
+
+Conclusion: Due to the angle, some caps are necessarily struck with the tip of the fingernail. This is uncomfortable.
+
 # Goals
 
 I have two primary goals, and they often conflict:
@@ -11,7 +55,7 @@ I want a keyboard that is cheap to manufacture in small quantities.
 The design and creation of custom computer keyboards is a rich kid's hobby, and it shouldn't be.
 Every computer user should be able to type comfortably, control what their input device does, and modify it to suit their needs.
 
-Currently the Mitosis best meets this goal for me.
+Currently the [Mitosis][] best meets this goal for me.
 It is a very minimalist kit that (due to ingenious design and attention to manufacturing details) remarkably meets several other goals (programmable, open, mechanical, wireless, low-profile, small, rather comfortable) while costing around $80 to manufacture in small quantities.
 
 **Ergonoimcs.** I want a keyboard that is ergonomic, and has its keys arranged for maximum typing comfort.
@@ -61,13 +105,13 @@ I'm starting from scratch, which means I can go all-out when it comes to weird k
 
 - **No Bling.**
 RGB LEDs, LCD displays, and other toys are fun, but I will discard it in favor of longer battery life.
-The Mitosis presents an interesting compromise: the wireless keyboards with no special effects have low power requirements, but the receiver module that sits on the desk is powered by the USB port, so it contains the status LEDs, and could have other toys added to it.
+The [Mitosis][] presents an interesting compromise: the wireless keyboards with no special effects have low power requirements, but the receiver module that sits on the desk is powered by the USB port, so it contains the status LEDs, and could have other toys added to it.
 One might still want a receiver with a bling-less mode for use with a battery-powered laptop.
 Also, I intend to train myself to touch-type this keyboard, so I need no backlight.
 
 # Other work / inspiration
 
-**[Ergodox](https://www.ergodox.io/).** I built an original ErgoDox, which for a very long time was the only keyboard to meet many of my requirements.
+**[Ergodox](https://www.ergodox.io/).** I built an original ErgoDox, which for a long time was the only keyboard to meet many of my requirements.
 But I found that it was not as comfortable as I had hoped:
 
 - The thumb-keys could be positioned more comfortably if they were angled differently than the rest of the board.
@@ -93,68 +137,25 @@ Things I dislike:
 - it is a single "joined at the wrist" board
 - I predict a lower thumb-key cluster (that you trigger with the pad rather than the side of the thumb) would feel more comfortable.
 
-**[Mitosis](https://imgur.com/a/mwTFj)**
+**[Mitosis][].**
 An ingenious, minimalist design, whose single PCB is small enough to be eligible for deep discount manufacturing while being used for multiple purposes: as the left- and right-hand PCBs, and the mounting plate as well!
 This is the first keyboard kit I liked enough to purchase after the ErgoDox.
 [FIXME: More]
 
 **[Dactyl](https://github.com/adereth/dactyl-keyboard) & [Lightcycle](https://twitter.com/adereth/status/862796553500540929)**
-A popular board that mimics the Kinesis Advantage.
-Employs an interesting Clojure-to-OpenSCAD compilation step.
+Dactyl is a popular board that, like the ErgoDox, mimics the Kinesis Advantage, but with a sculpted profile. The Lightcycle is a modification of the Dactyl to make it smaller, with fewer keys.
+Both employ an interesting Clojure-to-OpenSCAD compilation step.
 My intuition is that the thumb cluster is positioned too high, but I might be wrong about that.
 The author says it hasn't been released as a kit because there are still specific design flaws to be worked out.
 
 **[ManuForm](https://geekhack.org/index.php?topic=46015.0).**
 I like the thumb-cluster of keys and the column stagger, but I want a split keyboard.
-The author originally attempted to design it as a split board but found it to be too difficult. (TODO: why?)
+The author originally attempted to design it as a split board but found that to be too difficult. (TODO: why?)
 
 **[Eucalyptus](https://imgur.com/gallery/7jEsm).**
 This ingenious board uses tiled copies of one PCB to connect switches positioned on a curve, with a column stagger, eliminating tediously hand-wiring direct to the pins of the switches.
 It also incorporates a trackball!
-
-# Build log
-
-TODO: include photos
-
-### v5
-
-v4's switch placement algorithm assumes a constant angle at which the finger should strike the key. Observe that a range of angles from perpendicular to about 60 degrees is comfortable. Use this flexibility to bring the switch angles (and keycap centers) closer together.
-
-v4 prints the entire "key bowl" as one solid object. Instead, explore ways to print separated parts, requiring less support material, to be connected using standard hardware (e.g. M3 machine screws and nuts, and/or zip ties.)
-
-Result: (TODO)
-
-### v4
-
-Improved the "bowl" of v3 to avoid so much wasted support material.
-
-Result: As I feared, the vertical finger travel feels quite weird. But, I can operate all the keys without finger stretching, lateral finger movement, hand travel, or wrist movement. Could I get used to it? Maybe I'll try again to reorient the keys.
-
-### v3
-
-Hypothesis: determining maximum and minimum finger stretch can inform the derivation of a function that positions each switch and angles it toward the pad of the finger at that position. A distribution of switches across that range of motion should result in a board that can be typed on without moving the palms.
-
-Result: the "plate and post" support proved difficult to print and generated a lot of wasteful support material. I did not get a complete print. I should try to build more 45-degree angles into the design, to obviate the need for support material.
-
-Notes:
-
-- Happy with improvements to the "key bowl/boat," but the way I implemented it in OpenSCAD made it difficult to add supports. The "plate and post" was admittedly hastily added with a lot of tedious nudging-around.
-
-- I used my Logitech M570 trackball as a reference for this build. Notable difference between my trackball and my keyboard: I use the trackball with a palm-rest; the hand does not travel, the wrist does not move. Compare to most keyboards which require wrist-rests, that you're not supposed to use while typing. Can I make a keyboard that is comfortable with zero hand travel?
-
-- I wonder if I could mash-up my wireless trackball and the keyboard, replacing one of the thumb clusters. A combination pointing-device and curved-keyboard reminds me of the King's Assembly, which I didn't like because who wants to slide their bulky keyboard around their desk? And it seems like every keystroke would jostle the pointer. But a trackball instead could work well!
-
-### v2
-
-Hypothesis: with some keys angled sharply together, the pinky can still reach a 4th row without it being angled so much that it is struck with the fingernail.
-
-Result: it is difficult to reach over the first row to reach the 4th row, depending on the angle. It will be easier to evaluate success if I print a whole hand worth of keys and angle it consistently.
-
-### v1
-
-Hypothesis: Angling the switches will let me cram DSA caps together as closely as possible, making it easy to reach many of them with minimal finger travel.
-
-Conclusion: Due to the angle, some caps are necessarily struck with the tip of the fingernail. This is uncomfortable.
+But Sparkfun no longer sells that trackball module.
 
 # License: AGPL3+
 
@@ -169,3 +170,4 @@ If you incorporate this code into a web-based thing that people can use online (
 If you print an object based on this code and sell or give it away, I want the recipients to receive all the source code necessary to reproduce it. (But in this particular case, there may not be a mechanism in copyright law for me to insist that you do so.)
 
 [AGPL-3.0+]: http://www.gnu.org/licenses/agpl.html
+[Mitosis]: https://imgur.com/a/mwTFj
