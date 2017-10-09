@@ -58,21 +58,32 @@ module span() {
         }
     }
 }
-difference(){
-translate([0,0,85])
-rotate([-30,0,0])
-rotate([0,-90,0])
-difference(){
+difference(){ // carve off everything below 0z
+difference(){ // nothing should override keycap clearance
+    translate([0,0,85])
+    rotate([-30,0,0])
+    rotate([0,-90,0])
     union(){
+        // plates for each socket
+        translate([0,0,85])
+        rotate([-30,0,0])
+        rotate([0,-90,0])
         hand() translate([-sep/2,-sep/2,-18]) cube([sep,sep,6]);
+        // joiners between the plates
+        translate([0,0,85])
+        rotate([-30,0,0])
+        rotate([0,-90,0])
         span() {
             translate([-sep/2+3,0,-15]) cube([6,sep,6], true);
             translate([0,0,-15]) cube([sep,sep,6], true);
         }
         translate([-99,31,104]) rotate([90,30,60]) cylinder(60,4,4);
-        #translate([-73,45,44]) rotate([90,30,60]) cylinder(5,30,30);
+        translate([-73,45,44]) rotate([90,30,60]) cylinder(5,30,30);
     }
     //translate([14,0,-8]) rotate([0,-55,0]) cube([10,19.5,20], true);
+    translate([0,0,85])
+    rotate([-30,0,0])
+    rotate([0,-90,0])
     hand() keyblockout();
 }
 translate([-100,0,-15]) cube([200,200,30], true);
