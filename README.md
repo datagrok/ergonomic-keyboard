@@ -60,7 +60,7 @@ It is a very minimalist kit that (due to ingenious design and attention to manuf
 
 **Ergonoimcs.** I want a keyboard that is ergonomic, and has its keys arranged for maximum typing comfort.
 For me this means column depth and stagger proportional to the length of my fingers.
-(So most "ortho-linear" designs like the Planck, Let's Split, or Preonic are ruled out.)
+(So most easy-to-manufacture "ortho-linear" designs like the [Planck, Preonic](https://olkb.com/), [Let's Split](https://github.com/nicinabox/lets-split-guide), or [Nyquist](https://docs.keeb.io/) are ruled out.)
 Also, it means minimizing stretching, hand movement (re-homing), and lateral finger movement.
 
 Economy is improved by clever printed circuit board design and manufacture (e.g. using one PCB design that serves multiple purposes), but cheap PCBs are necessarily flat.
@@ -129,13 +129,15 @@ I like the design (which is still receiving revision) but:
 **[Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage2/).** The longtime favorite of RSI-afflicted individuals. This is the board to beat, for me to consider my design good-enough.
 Things I dislike:
 
-- it costs $350
+- it costs $350!
 - it is neither open nor fully programmable
 - some keys remain hard to reach, lateral finger movement required
 - the function-key row is ugly and requires hand movement to reach
 - big, hard to travel with
 - it is a single "joined at the wrist" board
 - I predict a lower thumb-key cluster (that you trigger with the pad rather than the side of the thumb) would feel more comfortable.
+
+**[Maltron Dual Hand](http://www.maltron.com/store/p20/Maltron_L90_dual_hand_fully_ergonomic_%283D%29_keyboard_-_US_English.html).** The other commercially-available "key bowl" keyboard. $500!
 
 **[Mitosis][].**
 An ingenious, minimalist design, whose single PCB is small enough to be eligible for deep discount manufacturing while being used for multiple purposes: as the left- and right-hand PCBs, and the mounting plate as well!
