@@ -15,7 +15,7 @@ module cherry_mx_keyhole() {
             // body
             translate([0,0,-9.3-5.5/2]) cube([14,14,5.5],true);
             // cap clearance
-            translate([0,0,-.16]) cube([19,19,20], true);
+            translate([0,0,30/2-10.16]) cube([19,19,30], true);
             // pin clearance
             translate([0,0,-14.5-6/2]) cube([14,14,6], true);
             // clips
