@@ -67,7 +67,7 @@ Also, I intend to train myself to touch-type this keyboard, so I need no backlig
 
 # Other work / inspiration
 
-**Ergodox.** I built an original ErgoDox, which for a very long time was the only keyboard to meet many of my requirements.
+**[Ergodox](https://www.ergodox.io/).** I built an original ErgoDox, which for a very long time was the only keyboard to meet many of my requirements.
 But I found that it was not as comfortable as I had hoped:
 
 - The thumb-keys could be positioned more comfortably if they were angled differently than the rest of the board.
@@ -75,14 +75,14 @@ But I found that it was not as comfortable as I had hoped:
 - Too many keys! I have to stretch or move away from home-row to reach many of them.
 - The column-stagger does not match my fingers well.
 
-**RedTilt.** I was originally inspired to try 3d-printing years ago by the Suka RedTilt.
+**[RedTilt](https://deskthority.net/workshop-f7/my-diy-keyboard-collection-or-how-i-became-a-kb-geek-t2534-120.html)** was my first inspiration to try 3d-printing a chassis, years ago.
 I like the design (which is still receiving revision) but:
 
 - I have no use for a TrackPoint pointing-stick.
 - I don't understand the lack of column stagger, and the horizontal curvature. The author says it is comfortable, but my fingers don't angle that way.
-- As far as I can tell, the author hasn't released their design.
+- As far as I can tell, the author hasn't open-sourced their design.
 
-**Kinesis Advantage.** The longtime favorite of RSI-afflicted individuals. This is the board to beat, for me to consider my design good-enough.
+**[Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage2/).** The longtime favorite of RSI-afflicted individuals. This is the board to beat, for me to consider my design good-enough.
 Things I dislike:
 
 - it costs $350
@@ -93,22 +93,22 @@ Things I dislike:
 - it is a single "joined at the wrist" board
 - I predict a lower thumb-key cluster (that you trigger with the pad rather than the side of the thumb) would feel more comfortable.
 
-**Mitosis**
+**[Mitosis](https://imgur.com/a/mwTFj)**
 An ingenious, minimalist design, whose single PCB is small enough to be eligible for deep discount manufacturing while being used for multiple purposes: as the left- and right-hand PCBs, and the mounting plate as well!
 This is the first keyboard kit I liked enough to purchase after the ErgoDox.
 [FIXME: More]
 
-**Dactyl/Lightcycle**
+**[Dactyl](https://github.com/adereth/dactyl-keyboard) & [Lightcycle](https://twitter.com/adereth/status/862796553500540929)**
 A popular board that mimics the Kinesis Advantage.
 Employs an interesting Clojure-to-OpenSCAD compilation step.
 My intuition is that the thumb cluster is positioned too high, but I might be wrong about that.
 The author says it hasn't been released as a kit because there are still specific design flaws to be worked out.
 
-**ManuForm.**
+**[ManuForm](https://geekhack.org/index.php?topic=46015.0).**
 I like the thumb-cluster of keys and the column stagger, but I want a split keyboard.
 The author originally attempted to design it as a split board but found it to be too difficult. (TODO: why?)
 
-**Eucalyptus.**
+**[Eucalyptus](https://imgur.com/gallery/7jEsm).**
 This ingenious board uses tiled copies of one PCB to connect switches positioned on a curve, with a column stagger, eliminating tediously hand-wiring direct to the pins of the switches.
 It also incorporates a trackball!
 
