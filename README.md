@@ -55,18 +55,17 @@ I want a keyboard that is cheap to manufacture in small quantities.
 The design and creation of custom computer keyboards is a rich kid's hobby, and it shouldn't be.
 Every computer user should be able to type comfortably, control what their input device does, and modify it to suit their needs.
 
-Currently the [Mitosis][] best meets this goal for me.
-It is a very minimalist kit that (due to ingenious design and attention to manufacturing details) remarkably meets several other goals (programmable, open, mechanical, wireless, low-profile, small, rather comfortable) while costing around $80 to manufacture in small quantities.
+Economy is improved by clever printed circuit board design and manufacture (e.g. using one PCB design that serves multiple purposes), but cheap PCBs are necessarily flat.
 
 **Ergonoimcs.** I want a keyboard that is ergonomic, and has its keys arranged for maximum typing comfort.
-For me this means column depth and stagger proportional to the length of my fingers.
+For me this means columnar key arrangement with depth and column stagger proportional to the length of my fingers, so I can reach every key without moving my hands away from the home position.
 (So most easy-to-manufacture "ortho-linear" designs like the [Planck, Preonic](https://olkb.com/), [Let's Split](https://github.com/nicinabox/lets-split-guide), or [Nyquist](https://docs.keeb.io/) are ruled out.)
 Also, it means minimizing stretching, hand movement (re-homing), and lateral finger movement.
 
-Economy is improved by clever printed circuit board design and manufacture (e.g. using one PCB design that serves multiple purposes), but cheap PCBs are necessarily flat.
-
 For ergonomics it seems I should create a sculpted chassis that arranges key switches perfectly for my fingers' most comfortable range of motion, but that means avoiding the use of a cheap, flat PCB in favor of a hand-wired 3D model.
 It also implies a small number of keys (because one can reach only so many without moving the hands.) A small number of keys implies cleverly-designed key chording, and I'm fine with that.
+
+I have been typing for decades, and have only managed to avoid Repetetive Strain Injury this long because I type "incorrectly." But, I make so may key mistakes that my actual wpm is rather low. The backspace key is so far away, and re-homing after smashing it 20 times often produces even more errors. If I'm going to sink the time and cost needed to reprogram 20 years of muscle memory, and adopt "proper" touch-typing techniques, no way am I going to risk giving myself RSI by using a board with poor ergonomics.
 
 I'm doing prototypes using a 3D printer, but large-volume 3D prints can be expensive for users of a 3D printing service.
 I am sure that even after I determine my optimal switch positions I will have additional work to do to reduce the chassis cost.
@@ -111,7 +110,8 @@ Also, I intend to train myself to touch-type this keyboard, so I need no backlig
 
 # Other work / inspiration
 
-**[Ergodox](https://www.ergodox.io/).** I built an original ErgoDox, which for a long time was the only keyboard to meet many of my requirements.
+**[Ergodox](https://www.ergodox.io/).**
+I built an original ErgoDox kit in 2013, which for a long time was the only keyboard to meet many of my requirements.
 But I found that it was not as comfortable as I had hoped:
 
 - The thumb-keys could be positioned more comfortably if they were angled differently than the rest of the board.
@@ -126,7 +126,9 @@ I like the design (which is still receiving revision) but:
 - I don't understand the lack of column stagger, and the horizontal curvature. The author says it is comfortable, but my fingers don't angle that way.
 - As far as I can tell, the author hasn't open-sourced their design.
 
-**[Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage2/).** The longtime favorite of RSI-afflicted individuals. This is the board to beat, for me to consider my design good-enough.
+**[Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage2/).**
+The longtime favorite of RSI-afflicted individuals.
+This is the board to beat, for me to consider my design good-enough.
 Things I dislike:
 
 - it costs $350!
@@ -140,8 +142,12 @@ Things I dislike:
 **[Maltron Dual Hand](http://www.maltron.com/store/p20/Maltron_L90_dual_hand_fully_ergonomic_%283D%29_keyboard_-_US_English.html).** The other commercially-available "key bowl" keyboard. $500!
 
 **[Mitosis][].**
-An ingenious, minimalist design, whose single PCB is small enough to be eligible for deep discount manufacturing while being used for multiple purposes: as the left- and right-hand PCBs, and the mounting plate as well!
+I built a Mitosis kit in 2017.
+It is a minimalist kit that (due to ingenious design and attention to manufacturing details) remarkably meets several of my goals (programmable, open, mechanical, wireless, low-profile, small, rather comfortable) while costing around $80 to manufacture in small quantities.
+Its single PCB design is small enough to be eligible for manufacturing discounts while being used for multiple purposes: as the left- and right-hand PCBs, and the mounting plate as well!
+Currently the [Mitosis][] best meets the "economy" goal for me.
 This is the first keyboard kit I liked enough to purchase after the ErgoDox.
+
 [FIXME: More]
 
 **[Dactyl](https://github.com/adereth/dactyl-keyboard) & [Lightcycle](https://twitter.com/adereth/status/862796553500540929)**
